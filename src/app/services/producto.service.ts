@@ -17,6 +17,14 @@ export class ProductoService {
     return this.http.get<Producto[]>(this.url);
   }
 
+  get(id: number): Observable<Producto>{
+    return this.http.get<Producto>(this.url + id);
+  }
+
+  getAllByNombre(nombre: string): Observable<Producto[]> {
+    return this.http.get<Producto[]>(this.url + '/consulta?descripcion=' + nombre);
+  }
+
   // Registra un nuevo producto
   save(bean: Producto): Observable<Object> {
     return this.http.post(this.url, bean);

@@ -1,3 +1,5 @@
+import { AuthInterceptorService } from './interceptors/AuthInterceptor.interceptor.service';
+import { AuthService } from './services/auth.service';
 import { CategoriaService } from './services/categoria.service';
 import { ProductoService } from './services/producto.service';
 import { NgModule } from '@angular/core';
@@ -11,6 +13,11 @@ import { FormsModule } from '@angular/forms';
 import { RegistraProductoComponent } from './components/producto/registra-producto/registra-producto.component';
 import { CategoriaComponent } from './components/categoria/categoria.component';
 import { RegistraCategoriaComponent } from './components/categoria/registra-categoria/registra-categoria.component';
+import { LoginComponent } from './components/usuario/login/login.component';
+import { CookieService } from 'ngx-cookie-service';
+import { HomeComponent } from './components/home/home.component';
+import { CompraComponent } from './components/compra/compra.component';
+import { ConsultaProductoComponent } from './components/producto/consulta-producto/consulta-producto.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +25,11 @@ import { RegistraCategoriaComponent } from './components/categoria/registra-cate
     ProductoComponent,
     RegistraProductoComponent,
     CategoriaComponent,
-    RegistraCategoriaComponent
+    RegistraCategoriaComponent,
+    LoginComponent,
+    HomeComponent,
+    CompraComponent,
+    ConsultaProductoComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +39,10 @@ import { RegistraCategoriaComponent } from './components/categoria/registra-cate
   ],
   providers: [ 
     ProductoService,
-    CategoriaService
+    CategoriaService,
+    AuthService,
+    CookieService,
+    AuthInterceptorService
   ],
   bootstrap: [AppComponent]
 })

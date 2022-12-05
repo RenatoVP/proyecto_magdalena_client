@@ -21,7 +21,26 @@
               <li><a class="dropdown-item" routerLink="/categoria">Categoria</a></li>
             </ul>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Consultas
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="/producto/consulta">Producto</a></li>
+              <li><a class="dropdown-item" routerLink="/categoria/consulta">Categoria</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/compra">Generar Pedido</a>
+          </li>
         </ul>
+
+        <!-- Mostrar el boton cuando el usuario no esta logeado-->
+        <a routerLink="/usuario/login" class="btn btn-secondary" *ngIf="userDisplayName == null "><i class="fa fa-user-o" aria-hidden="true"> Ingresar</i></a>
+        <!-- Mostrar cuando el usuario esta logeado -->
+        <p class="text-white" *ngIf="userDisplayName != null ">Bienvenido usuario: {{userDisplayName}}</p>
+        <button href="#" class="btn btn-secondary" *ngIf="userDisplayName != null " (click)="logout()">Log out</button>
       </div>
     </div>
   </nav>

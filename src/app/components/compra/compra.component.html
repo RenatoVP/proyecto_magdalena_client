@@ -1,0 +1,69 @@
+<h3 class="text-center text-secondary">Registrar Pedido</h3>
+<form action="">
+    <div class="row">
+        <div class="col-md-4">
+            <fieldset class="card card-body">
+                <legend>Datos del Producto: </legend>
+                <div class="form-group">
+                    <label>Codigo: </label> <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Nombre: </label> <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Cantidad: </label> <input type="number" class="form-control" step="1" min="1" max="1000" />
+                </div>
+                <div class="form-group">
+                    <label>Precio: </label> <input type="number" class="form-control" step=".5" min=".50" max="1000" />
+                </div>
+
+                <div class="my-2">
+                    <a class="btn btn-secondary" routerLink="/producto/consulta">Consultar</a>
+                    <button class="btn btn-primary">Agregar</button>
+                </div>
+            </fieldset>
+
+            <fieldset class="card card-body">
+                <legend>Datos del Cliente: </legend>
+                <div class="form-group">
+                    <label>Nombre: </label> <input type="text" class="form-control" />
+                </div>
+                <div class="my-2">
+                    <a href="#" class="btn btn-primary">Mantener</a>
+                    <button class="btn btn-secondary">Consultar</button>
+                </div>
+            </fieldset>
+
+            <div class="form-group card card-body">
+                <label>Vendedor: </label> <select class="form-control">
+                    <option value="-1">Seleccione...</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="col-md-8">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre del Producto</th>
+                        <th>Categoria</th>
+                        <th>Precio Unitario</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+                <tfoot>
+
+                </tfoot>
+            </table>
+
+            <button type="submit" class="btn btn-primary my-2">Registrar</button>
+        </div>
+    </div>
+
+</form>

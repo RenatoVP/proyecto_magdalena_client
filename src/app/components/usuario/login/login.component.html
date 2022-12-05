@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-center align-items-center container" style="height: 100vh;">
+    <div class="card my-3" style="width: 500px">
+        <div class="card-body">
+            <div class="text-center">
+                <h3 class="text-secondary">Sistema Magdalena</h3>
+            </div>
+            <form (ngSubmit)="login()">
+                <div class="form-group">
+                    <label for="username">Usuario</label> 
+                    <input type="email" class="form-control" name="username" id="username" placeholder="Ingrese usuario (correo)" required [(ngModel)]="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label> 
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Ingrese contraseña" required [(ngModel)]="password">
+                </div>
+                <button class="btn btn-block btn-primary">Ingresar</button>
+            </form>
+        </div>
+    </div>
+</div>
