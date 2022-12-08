@@ -1,0 +1,69 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Edición de usuario</h3>
+    <form (ngSubmit)= "onSubmit()" #usuarioForm = "ngForm">
+
+      <div class="form-group">
+        
+        <label>Nombre : </label>
+        <input type = "text"
+        class="form-control"
+        id = "nombre"
+        [(ngModel)] = "usuario.nombre"
+        name = "nombre"
+        required
+        minlength="4"
+        maxlength="10"
+        placeholder="Digite su nombre "
+        #nombre = "ngModel"
+        >
+        
+      </div>
+  
+      <div class="form-group">
+        <label>Apellido : </label>
+        <input type = "text"
+        class="form-control"
+        id = "apellidos"
+        [(ngModel)] = "usuario.apellidos"
+        name = "apellidos"
+        required
+        minlength="4"
+        maxlength="10"
+        placeholder="Digite su apellidos "
+        #apellidos = "ngModel"
+        >
+      </div>
+
+      <div class="form-group">
+        <label>username : </label>
+        <input type = "text"
+        class="form-control"
+        id = "username"
+        [(ngModel)] = "usuario.username"
+        name = "username"
+        required
+        minlength="4"
+        maxlength="10"
+        placeholder="Digite su username "
+        #username = "ngModel"
+        >
+      </div>
+      <div class="form-group">
+        <label>password : </label>
+        <input type = "text"
+        class="form-control"
+        id = "password"
+        [(ngModel)] = "usuario.password"
+        name = "password"
+        required
+        minlength="4"
+        maxlength="10"
+        placeholder="Digite su password "
+        #password = "ngModel"
+        > 
+      </div>
+  
+      <button class="btn btn-success" [disabled]= "!usuarioForm.form.valid">Guardar</button>
+    </form>
+  </div>
+

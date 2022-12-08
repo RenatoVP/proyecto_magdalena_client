@@ -18,6 +18,9 @@ import { CookieService } from 'ngx-cookie-service';
 import { HomeComponent } from './components/home/home.component';
 import { CompraComponent } from './components/compra/compra.component';
 import { ConsultaProductoComponent } from './components/producto/consulta-producto/consulta-producto.component';
+import { RegistrarUsuarioComponent } from './components/usuario/registrar-usuario/registrar-usuario.component';
+import { ActualizarUsuarioComponent } from './components/usuario/actualizar-usuario/actualizar-usuario.component';
+import { ListaUsuariosComponent } from './components/usuario/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { ConsultaProductoComponent } from './components/producto/consulta-produc
     LoginComponent,
     HomeComponent,
     CompraComponent,
-    ConsultaProductoComponent
+    ConsultaProductoComponent,
+    ListaUsuariosComponent,
+    RegistrarUsuarioComponent,
+    ActualizarUsuarioComponent
   ],
   imports: [
     BrowserModule,
